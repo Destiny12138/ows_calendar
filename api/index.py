@@ -3,14 +3,14 @@ import requests
 import io
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return 'Hello, World!'
+# @app.route('/')
+# def home():
+#     return 'Hello, World!'
 
 @app.route('/about')
 def about():
     return 'About'
-@app.route("/image", methods=['get', 'post'])
+@app.route("/")
 def index():
     header = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3868.400 QQBrowser/10.8.4394.400"
