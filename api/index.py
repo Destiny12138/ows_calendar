@@ -18,11 +18,14 @@ def index():
     header = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3868.400 QQBrowser/10.8.4394.400"
     }  # 发送头信息
-    today = str(datetime.date.today())
-    year = today[0:4]
-    mon = today[5:7]+today[8:]
+    today = str(datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d'))
+    [year, month, day] = today.split('-')
+    if len(month) == 1:
+        month = "0" + month
+    if len(day) == 1:
+        day == "0" + day
     req = requests.get(
-        url=f"http://img.owspace.com/Public/uploads/Download/{year}/{mon}.jpg", headers=header)
+        url=f"http://img.owspace.com/Public/uploads/Download/{year}/{month + day}.jpg", headers=header)
     byte = req.content
     print(byte)
     # image = file("http://img.owspace.com/Public/uploads/Download/2023/0113.jpg")
