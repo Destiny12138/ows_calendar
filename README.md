@@ -34,7 +34,7 @@ http://img.owspace.com/Public/uploads/Download/2023/0115.jpg是该图片的官�
 
 进入GitHub仓库，会发现文件格式如下图所示
 
-<img src="C:\Users\19852\Desktop\README.assets\image-20230115115212756.png" style="zoom:80%;" />
+<img src="README.assets\image-20230115115212756.png" style="zoom:80%;" />
 
 下载该仓库全部代码，将requirement.txt与/api/index.python两个文件修改为该仓库内的代码并保存，等待vercel自动部署
 
